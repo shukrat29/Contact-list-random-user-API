@@ -1,4 +1,48 @@
 .wrapper {
+  background: url(./background.jpg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* phone layout  */
+.phone {
   background: url(./wallpaper.JPG.jpg) no-repeat center;
   background-size: cover;
+}
+
+/* Home screen  */
+.slider {
+  width: 100%;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  appearance: none;
+  background: rgb(150, 185, 211);
+}
+#label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: slideAnimation 3s ease-in-out;
+}
+
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
+  }
 }
